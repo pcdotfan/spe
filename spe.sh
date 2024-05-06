@@ -10,7 +10,7 @@ fi
 # 节点安装功能
 function install_node() {
 apt update
-apt install screen -y
+apt install screen unzip -y
 
 # 安装GO
 wget https://go.dev/dl/go1.22.1.linux-amd64.tar.gz -P /tmp/
