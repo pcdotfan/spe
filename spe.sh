@@ -37,6 +37,7 @@ read -p "请输入挖矿CPU核心数: " cpu_core
 
 screen -dmS spewa bash -c "./spectreminer --miningaddr='$wallet_addr' --workers '$cpu_core'"
 
+echo "====================== 安装完成 请使用screen -r spe 查看运行情况 ==========================="
 
 }
 
