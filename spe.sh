@@ -41,6 +41,15 @@ echo "====================== 安装完成 请使用screen -r spe 查看运行情
 
 }
 
+function miner() {
+cd ~/bin
+
+read -p "请输入挖矿钱包地址: " wallet_addr
+read -p "请输入挖矿CPU核心数: " cpu_core
+
+screen -dmS spewa bash -c "./spectreminer --miningaddr='$wallet_addr' --workers '$cpu_core'"
+echo "====================== 启动挖矿节点完成 请使用screen -r spewa 查看运行情况 ==========================="
+}
 # 主菜单
 function main_menu() {
     clear
@@ -51,10 +60,12 @@ function main_menu() {
     echo "节点社区 Discord 社群:https://discord.gg/GbMV5EcNWF"
     echo "请选择要执行的操作:"
     echo "1. 安装常规节点"
+    echo "2. 启动挖矿节点"
     read -p "请输入选项(1): " OPTION
 
     case $OPTION in
     1) install_node ;;
+    2) miner ;;
     *) echo "无效选项" ;;
     esac
 }
