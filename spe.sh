@@ -12,14 +12,7 @@ function install_node() {
 apt update
 apt install screen unzip -y
 
-# 安装GO
-wget https://go.dev/dl/go1.22.1.linux-amd64.tar.gz -P /tmp/
-tar -C /usr/local -xzf /tmp/go1.22.1.linux-amd64.tar.gz
-echo "export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin" >> ~/.bashrc
-export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin
-go version
-
-wget https://github.com/spectre-project/spectred/releases/download/v0.3.14/spectred-v0.3.14-linux-x86_64.zip
+wget https://github.com/spectre-project/spectred/releases/download/v0.3.14/spectred-v0.3.14-linux-aarch64.zip
 unzip spectred-v0.3.14-linux-x86_64.zip
 cd ~/bin
 ./spectred --utxoindex &
