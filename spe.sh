@@ -13,7 +13,7 @@ apt update
 apt install screen unzip -y
 
 wget https://github.com/spectre-project/spectred/releases/download/v0.3.14/spectred-v0.3.14-linux-aarch64.zip
-unzip spectred-v0.3.14-linux-x86_64.zip
+unzip spectred-v0.3.14-linux-aarch64.zip
 cd ~/bin
 ./spectred --utxoindex &
 SPECTRED_PID=$!
